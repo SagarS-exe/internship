@@ -12,7 +12,6 @@ class AllUsersView extends ConsumerStatefulWidget {
 class AllUsersViewState extends ConsumerState<AllUsersView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     ref.read(allUserProvider).getUsers(1);
   }
