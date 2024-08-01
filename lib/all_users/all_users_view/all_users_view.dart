@@ -23,7 +23,6 @@ class AllUsersViewState extends ConsumerState<AllUsersView> {
 
   @override
   Widget build(BuildContext context) {
-    // return Consumer(builder: (context, ref, child) {
     final userListNer = ref.watch(allUserProvider);
     return Scaffold(
       body: userListNer.isLoading
@@ -32,7 +31,6 @@ class AllUsersViewState extends ConsumerState<AllUsersView> {
             onRefresh: users,
             child: SingleChildScrollView(
               child: Column(
-                // mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   userListNer.count == 0
@@ -43,26 +41,6 @@ class AllUsersViewState extends ConsumerState<AllUsersView> {
                           itemCount: userListNer.count,
                           itemBuilder: (BuildContext context, index) {
                             final rec = userListNer.myList[index];
-                            // return Card(
-                            //   color: Colors.white54,
-                            //   child: ListTile(
-                            //     leading: CircleAvatar(
-                            //       radius: 35,
-                            //       backgroundImage: NetworkImage(rec.avatar),
-                            //     ),
-                            //     title: Text(rec.firstName),
-                            //     subtitle: Text(rec.lastName),
-                            //     trailing: ElevatedButton(
-                            //       onPressed: () {},
-                            //       style: ElevatedButton.styleFrom(
-                            //           backgroundColor: Colors.white),
-                            //       child: const Text(
-                            //         "Add Friend",
-                            //         style: TextStyle(color: Colors.blue),
-                            //       ),
-                            //     ),
-                            //   ),
-                            // );
                             return Row(
                               children: [
                                 const SizedBox(
