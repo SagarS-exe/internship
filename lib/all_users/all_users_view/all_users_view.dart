@@ -14,7 +14,7 @@ class AllUsersViewState extends ConsumerState<AllUsersView> {
   void initState() {
     super.initState();
     ref.read(allUserProvider).getUsers(1);
-    print("-----");
+    //print("-----");
   }
 
   Future users() async {
