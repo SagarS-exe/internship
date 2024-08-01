@@ -20,6 +20,7 @@ class TabBarPageState extends ConsumerState<TabBarPage> {
     // TODO: implement initState
     super.initState();
     ref.read(singleUserProvider).getUserId();
+    print("hi flutter");
   }
 
   @override
